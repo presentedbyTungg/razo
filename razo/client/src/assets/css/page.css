@@ -1,0 +1,680 @@
+@media screen and (min-width: 1028px) {
+  /* ==========================================================================================================
+===================================Home desktop======================================================== */
+
+  .home-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .home-page-main {
+    
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 75%;
+    height: auto;
+  }
+
+  .home-page-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+    height: 89vh;
+    position: sticky;
+    top: 70px;
+  }
+  .home-page-sub-top,
+  .home-page-sub-bottom {
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .home-page-sub-title {
+    color: #000000;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+    background-color: #cdcdcd;
+  }
+  .online-box {
+    width: 90%;
+    height: 7vh;
+    margin: 10px auto;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+  }
+  .online-box > i {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+  .online-box > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  .user-upload {
+    width: 95%;
+    padding: 10px;
+    border: #cdcdcd 1px solid;
+   box-shadow: #000000 0px 0px 5px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .user-upload h2 {
+    color: #000000;
+  }
+  .user-upload i {
+    padding: 5px;
+    font-size: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #cdcdcd 1px solid;
+    cursor: pointer;
+  }
+  .user {
+    width: 90px;
+    height: 90px;
+    border: #eeeeee 1px solid;
+    border-radius: 10px;
+    box-shadow: #e5e5e5 0px 0px 5px;
+  }
+  .user i {
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-posts {
+    width: 100%;
+    height: auto;
+    
+  }
+  /* -----------------------posts ------------------------ */
+
+  /* Container bài đăng: layout flex với avatar bên trái và content bên phải */
+  .posts {
+    width: 95%;
+    padding: 10px; /* Tăng padding một chút để đẹp hơn */
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: #000000 0px 0px 5px;
+    border-radius: 10px;
+    max-height: none; /* Bỏ max-height để nội dung hiển thị đầy đủ */
+    height: auto;
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa avatar và content */
+    align-items: flex-start; /* Căn các phần tử về phía trên */
+  }
+
+  /* Avatar user: hiển thị ở góc trên bên trái, độc lập */
+  .posts .user {
+    width: 60px; /* Giảm kích thước một chút so với trước */
+    height: 60px;
+    border: #eeeeee 1px solid;
+    border-radius: 50%; /* Làm tròn hoàn toàn */
+    box-shadow: #e5e5e5 0px 0px 5px;
+    flex-shrink: 0; /* Không cho phép thu nhỏ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .posts .user i {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem; /* Giảm font size một chút */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Nội dung chính của bài đăng: chứa thông tin user, hình ảnh và interactive buttons */
+  .posts-content {
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Bỏ padding vì container đã có padding */
+    gap: 12px; /* Khoảng cách giữa các phần tử trong content */
+  }
+
+  /* Container user-image không còn cần thiết - có thể giữ lại để tương thích */
+  .user-image {
+    display: none; /* Ẩn vì không còn sử dụng */
+  }
+
+  /* Interactive buttons: nằm ngang dưới hình ảnh */
+  .interactive {
+    display: flex;
+    flex-direction: row; /* Đổi từ column sang row - các icon nằm ngang */
+    gap: 20px; /* Khoảng cách giữa các icon */
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: flex-start; /* Căn các icon về bên trái */
+    height: auto; /* Bỏ height cố định */
+    padding: 5px 0; /* Padding trên/dưới nhẹ */
+    margin-top: 5px; /* Thêm margin-top để tách biệt với hình ảnh */
+  }
+
+  /* Style cho từng icon interactive */
+  .interactive > i {
+    padding: 8px 12px; /* Padding ngang nhiều hơn, dọc ít hơn */
+    color: #000000;
+    font-size: 1.3rem; /* Giảm từ 2vw sang rem cố định để dễ kiểm soát */
+    cursor: pointer;
+    border-radius: 8px; /* Bo góc để đẹp hơn */
+    transition: all 0.2s ease; /* Thêm transition mượt mà */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hover effect cho interactive icons */
+  .interactive > i:hover {
+    background-color: #f0f0f0; /* Màu nền nhẹ khi hover */
+    box-shadow: #000000 0px 0px 3px; /* Shadow nhẹ hơn */
+    color: #000000;
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+  }
+
+  /* Active state khi click */
+  .interactive > i:active {
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi click */
+    background-color: #e0e0e0;
+  }
+  .user-infor {
+   
+    box-shadow: #f6f6f6 0px 0px 5px;
+    border-radius: 10px;
+  }
+  .user-infor > span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000000;
+    padding: 5px;
+  }
+
+  /* Grid hình ảnh: 3 cột trên desktop */
+  .images-uploaded {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    grid-gap: 10px;
+    width: 100%;
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    margin-top: 5px; /* Thêm margin-top để tách biệt với user-infor */
+  }
+
+  /* Item hình ảnh: giữ tỷ lệ vuông */
+  .images-uploaded-item {
+    width: 100%;
+    aspect-ratio: 1; /* Giữ tỷ lệ vuông cho ảnh */
+    border-radius: 10px;
+    box-shadow: #404040 0px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài */
+    background-color: #f5f5f5; /* Màu nền nhẹ cho placeholder */
+  }
+
+  /* Ảnh trong item: full width và height, cover để đẹp */
+  .images-uploaded-item img {
+    width: 100%; /* Full width thay vì 70% */
+   
+    object-fit: cover; /* Cover để ảnh đẹp hơn, không bị méo */
+    border-radius: 10px; /* Bo góc ảnh */
+  }
+
+  /* ==================================Login========================================== */
+
+  .login-box {
+    width: 30%;
+    height: 70vh;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px rgb(216, 216, 216);
+    border-radius: 15%;
+    position: fixed;
+    top: 15vh;
+    right: 33vw;
+    left: auto;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-box h2 {
+    padding: 20px 0;
+  }
+
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+  }
+  .login-box form label {
+    font-size: 1vw;
+    padding-bottom: 5px;
+    font-weight: bolder;
+  }
+  .login-box form input {
+    width: 100%;
+    height: 5vh;
+    background-color: #cdcdcd;
+    border: none;
+    outline: none;
+    padding: 10px;
+  }
+
+  .login-box button {
+    width: 30%;
+    height: 5vh;
+    cursor: pointer;
+    margin-top: 3vh;
+    transition: all 0.3s ease-in-out;
+  }
+  .login-box button:hover {
+    background-color: #000000;
+  }
+  .login-box > span {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 5px;
+  
+  }
+  .login-box > span:hover {
+    color: blue;
+  }
+  .login-box p {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 1vw;
+    font-weight: bolder;
+      border-bottom: 1px black solid;
+  }
+  .login-box .login-another {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+  }
+  .login-another-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .login-another-item:hover {
+    background-color: #a2a2a2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);
+  }
+  .login-another-item > i {
+    font-size: 1.5rem;
+  }
+  .login-another-item > span {
+    font-size: 0.8rem;
+  }
+/* ==================================Logout========================================== */
+
+.logout-box
+{
+  width: 30vw;
+  height: 20vh;
+  border: #000000 1px solid;
+}
+
+}
+
+/* ==========================================================================================================
+===================================Posts Mobile - Tối ưu UI bài đăng cho mobile======================================================== */
+@media screen and (max-width: 480px) {
+  
+  /* Ẩn sidebar (Đang hoạt động và Nhóm đang hoạt động) trên mobile để tiết kiệm không gian */
+  .home-page-sub {
+    display: none;
+  }
+
+  /* Container chính: bố cục dọc, full width, padding bottom để tránh bị che bởi header ở dưới */
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 80px; /* Thêm padding bottom để không bị che bởi header ở dưới */
+    gap: 0;
+  }
+
+  /* Phần main: full width, giảm border-radius, giảm margin */
+  .home-page-main {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0; /* Bỏ border-radius trên mobile để tận dụng tối đa không gian */
+    height: auto;
+    padding: 0 10px; /* Giảm padding ngang */
+  }
+
+  /* Section upload: giảm padding, điều chỉnh layout compact hơn */
+  .user-upload {
+    width: 100%;
+    padding: 8px; /* Giảm padding từ 10px xuống 8px */
+    border: #cdcdcd 1px solid;
+    box-shadow: #000000 0px 0px 3px; /* Giảm shadow nhẹ hơn */
+    border-radius: 8px; /* Giảm border-radius */
+    margin: 10px 0; /* Giảm margin trên/dưới */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px; /* Thêm gap nhỏ giữa các phần tử */
+  }
+
+  /* Title trong user-upload: giảm font size cho phù hợp mobile */
+  .user-upload h2 {
+    color: #000000;
+    font-size: 0.9rem; /* Giảm font size từ mặc định */
+    flex: 1; /* Cho phép text chiếm không gian còn lại */
+    text-align: center; /* Căn giữa text */
+  }
+
+  /* Icon upload: giảm kích thước */
+  .user-upload i {
+    padding: 5px;
+    font-size: 1.3rem; /* Giảm từ 2rem xuống 1.3rem */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #cdcdcd 1px solid;
+    cursor: pointer;
+    min-width: 35px; /* Đảm bảo icon có kích thước tối thiểu để dễ click */
+    height: 35px;
+    border-radius: 5px;
+  }
+
+  /* Avatar user: giảm kích thước trên mobile */
+  .user {
+    width: 50px; /* Giảm từ 90px xuống 50px */
+    height: 50px;
+    border: #eeeeee 1px solid;
+    border-radius: 8px;
+    box-shadow: #e5e5e5 0px 0px 3px;
+    min-width: 50px; /* Đảm bảo kích thước tối thiểu */
+    flex-shrink: 0; /* Không cho phép thu nhỏ */
+  }
+
+  .user i {
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem; /* Giảm từ 4rem xuống 1.8rem */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Container posts: giảm margin và padding */
+  .home-posts {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Component posts: điều chỉnh layout cho mobile */
+  .posts {
+    width: 100%;
+    padding: 10px; /* Giữ nguyên padding nhưng container đã có padding */
+    margin: 10px 0; /* Giảm margin trên/dưới */
+    background-color: #ffffff;
+    box-shadow: #000000 0px 0px 3px; /* Giảm shadow */
+    border-radius: 8px; /* Giảm border-radius */
+    max-height: none; /* Bỏ max-height để nội dung có thể hiển thị đầy đủ */
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Đổi từ row sang column trên mobile */
+    gap: 10px; /* Thêm gap giữa các phần */
+  }
+
+  /* Phần user-image và interactive: sắp xếp ngang trên mobile */
+  .user-image {
+    display: flex;
+    flex-direction: row; /* Đổi từ column sang row trên mobile */
+    justify-content: space-between; /* Phân bố đều */
+    align-items: flex-start; /* Căn trên */
+    gap: 10px; /* Giảm gap từ 20px xuống 10px */
+    width: 100%;
+  }
+
+  /* User avatar trong posts: giảm kích thước */
+  .posts .user-image .user {
+    width: 45px; /* Nhỏ hơn một chút so với user-upload */
+    height: 45px;
+    border-radius: 50%; /* Làm tròn hoàn toàn cho đẹp hơn */
+  }
+
+  .posts .user-image .user i {
+    font-size: 1.5rem; /* Giảm font size */
+  }
+
+  /* Interactive buttons: sắp xếp ngang thay vì dọc */
+  .interactive {
+    display: flex;
+    flex-direction: row; /* Đổi từ column sang row trên mobile */
+    gap: 8px; /* Giảm gap từ 15px xuống 8px */
+    font-size: 1.2rem; /* Giảm font size */
+    align-items: center;
+    justify-content: flex-end; /* Căn về phía phải */
+    height: auto; /* Bỏ height cố định */
+    margin-top: 0;
+  }
+
+  /* Interactive icons: kích thước nhỏ hơn, dễ click hơn */
+  .interactive > i {
+    padding: 8px; /* Giảm padding */
+    color: #000000;
+    font-size: 1.1rem; /* Thay đổi từ 2vw sang rem cố định */
+    cursor: pointer;
+    min-width: 32px; /* Đảm bảo kích thước tối thiểu để dễ click */
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.2s ease; /* Thêm transition mượt mà */
+  }
+
+  /* Bỏ hover effect trên mobile vì không có hover */
+  .interactive > i:active {
+    background-color: #f0f0f0; /* Thay hover bằng active state */
+    transform: scale(0.95); /* Hiệu ứng nhấn */
+  }
+
+  /* Phần nội dung posts: full width */
+  .posts-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+  }
+
+  /* User information: điều chỉnh font size */
+  .user-infor {
+    box-shadow: #f6f6f6 0px 0px 3px;
+    border-radius: 8px;
+    padding: 8px; /* Thêm padding */
+  }
+
+  .user-infor > span {
+    display: flex;
+    flex-direction: column; /* Sắp xếp dọc trên mobile */
+    align-items: flex-start; /* Căn trái */
+    gap: 5px;
+    color: #000000;
+    padding: 5px;
+    font-size: 0.85rem; /* Giảm font size */
+  }
+
+  .user-infor > span h3 {
+    font-size: 1rem; /* Font size cho tên user */
+    margin: 0;
+  }
+
+  .user-infor > span p {
+    font-size: 0.75rem; /* Font size nhỏ hơn cho ngày tháng */
+    color: #666;
+  }
+
+  /* Grid ảnh: giảm từ 3 cột xuống 2 cột trên mobile để ảnh lớn hơn, dễ xem */
+  .images-uploaded {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Thay đổi từ 3 cột sang 2 cột */
+    grid-gap: 8px; /* Giảm gap từ 10px xuống 8px */
+    width: 100%;
+    height: auto; /* Bỏ height cố định */
+  }
+
+  /* Item ảnh: điều chỉnh để hiển thị tốt hơn */
+  .images-uploaded-item {
+    width: 100%;
+    aspect-ratio: 1; /* Giữ tỷ lệ vuông */
+    border-radius: 8px;
+    box-shadow: #404040 0px 0px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài */
+  }
+
+  .images-uploaded-item img {
+    width: 100%; /* Full width của container */
+    height: 100%; /* Full height của container */
+    object-fit: cover; /* Đảm bảo ảnh cover đầy container mà không bị méo */
+  }
+
+  /* Responsive cho login box trên mobile */
+  .login-box {
+    width: 90%; /* Tăng từ 30% lên 90% để dễ nhìn và tương tác hơn */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    max-height: 85vh; /* Giới hạn chiều cao tối đa */
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px rgb(216, 216, 216);
+    border-radius: 15px; /* Giảm border-radius từ 15% xuống 15px */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa hoàn hảo */
+    right: auto;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Cho phép scroll nếu nội dung quá dài */
+  }
+
+  .login-box h2 {
+    padding: 15px 0; /* Giảm padding */
+    font-size: 1.2rem; /* Điều chỉnh font size */
+  }
+
+  .login-box form {
+    width: 100%; /* Full width trên mobile */
+    height: auto;
+  }
+
+  .login-box form label {
+    font-size: 0.9rem; /* Thay đổi từ 1vw sang rem */
+    padding-bottom: 5px;
+    font-weight: bolder;
+  }
+
+  .login-box form input {
+    width: 100%;
+    height: 45px; /* Tăng chiều cao từ 5vh để dễ nhập liệu */
+    background-color: #cdcdcd;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem; /* Tăng font size để dễ đọc */
+  }
+
+  .login-box button {
+    width: 100%; /* Full width trên mobile */
+    height: 45px; /* Tăng chiều cao */
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem; /* Tăng font size */
+  }
+
+  .login-box > span {
+    margin-top: 10px;
+    font-size: 0.85rem; /* Tăng font size một chút */
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .login-box p {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 0.95rem; /* Thay đổi từ 1vw sang rem */
+    font-weight: bolder;
+    border-bottom: 1px black solid;
+  }
+
+  .login-another-item > i {
+    font-size: 1.3rem; /* Giảm một chút */
+  }
+
+  .login-another-item > span {
+    font-size: 0.85rem; /* Tăng font size một chút */
+  }
+
+  /* Logout box trên mobile */
+  .logout-box {
+    width: 90%; /* Thay đổi từ 30vw sang 90% */
+    height: auto; /* Tự động điều chỉnh */
+    min-height: 150px; /* Chiều cao tối thiểu */
+    border: #000000 1px solid;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
